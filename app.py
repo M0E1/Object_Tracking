@@ -120,8 +120,9 @@ if upload_vid is not None:
         stframe2.image(fg_mask_colored, caption='🕵️‍♂️ Foreground Mask', channels='BGR')
         object_counter.markdown(f"🔴 **Objects detected:** `{object_count}`")
 
-        # current_frame += 1
-        # progress.progress(min(current_frame / total_frames, 1.0))
+        current_frame += 1
+        progress.progress(min(current_frame / total_frames, 1.0))
+        
     if current_frame % 10 == 0:
         fig, ax = plt.subplots()
         ax.plot(object_counts, color='blue')

@@ -22,11 +22,13 @@ A user-friendly web application built with Streamlit and OpenCV for real-time ob
     -   Provides a live count of detected objects.
 -   **Data Visualization**: Generates a plot of the object count over time, providing insights into the video's activity.
 
-## 📸 Demo
+## 📸 App Screenshot 
 
-*(A GIF or screenshot of the app in action would go here)*
+<img width="2559" height="1303" alt="Screenshot 2025-07-12 103809" src="https://github.com/user-attachments/assets/827e44cb-ad84-4453-9347-4a0fbf9927ee" />
 
-!App Screenshot <!--- Placeholder: Create a screenshot and name it placeholder.png or update the link -->
+<img width="728" height="818" alt="Screenshot 2025-07-12 103934" src="https://github.com/user-attachments/assets/63e3fadf-ad88-419e-bfae-de5af459bf6a" />
+
+
 
 ## 🛠️ Technologies Used
 

@@ -85,6 +85,7 @@ if upload_vid is not None:
 
     while capture.isOpened():
         if not st.session_state.is_running:
+            time.sleep(0.1)
             continue
 
         ret, frame = capture.read()
@@ -119,9 +120,9 @@ if upload_vid is not None:
         stframe2.image(fg_mask_colored, caption='🕵️‍♂️ Foreground Mask', channels='BGR')
         object_counter.markdown(f"🔴 **Objects detected:** `{object_count}`")
 
-        current_frame += 1
-        progress.progress(min(current_frame / total_frames, 1.0))
-
+        # current_frame += 1
+        # progress.progress(min(current_frame / total_frames, 1.0))
+    if current_frame % 10 == 0:
         fig, ax = plt.subplots()
         ax.plot(object_counts, color='blue')
         ax.set_title("📊 Object Count over Time")

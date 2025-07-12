@@ -92,8 +92,8 @@ if upload_vid is not None:
         if not ret:
             break
 
-        frame = cv2.resize(frame, (640, 360))
-
+        #frame = cv2.resize(frame, (640, 360))
+        
         fg_mask = back_subtractor.apply(frame)
         img_blur = cv2.GaussianBlur(fg_mask, (11, 11), 0)
         _, img_thresh = cv2.threshold(img_blur, 200, 255, cv2.THRESH_BINARY)

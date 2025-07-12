@@ -85,14 +85,13 @@ if upload_vid is not None:
 
     while capture.isOpened():
         if not st.session_state.is_running:
-            time.sleep(0.1)
             continue
 
         ret, frame = capture.read()
         if not ret:
             break
 
-        #frame = cv2.resize(frame, (640, 360))
+        frame = cv2.resize(frame, (640, 360))
         
         fg_mask = back_subtractor.apply(frame)
         img_blur = cv2.GaussianBlur(fg_mask, (11, 11), 0)

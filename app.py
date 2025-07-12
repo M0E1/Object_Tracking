@@ -123,7 +123,6 @@ if upload_vid is not None:
         current_frame += 1
         progress.progress(min(current_frame / total_frames, 1.0))
         
-    if current_frame % 10 == 0:
         fig, ax = plt.subplots()
         ax.plot(object_counts, color='blue')
         ax.set_title("📊 Object Count over Time")

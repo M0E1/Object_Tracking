@@ -50,7 +50,7 @@ if upload_vid is not None:
     current_frame = 0
 
     # تشغيل الفيديو تلقائيًا
-    while True:
+    while capture.isOpened():
         ret, frame = capture.read()
         if not ret:
             break  # نهاية الفيديو
